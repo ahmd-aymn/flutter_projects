@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tunes_player/widgets/tune_model.dart';
+import 'package:tunes_player/models/tune_model.dart';
 
 class TuneItem extends StatelessWidget {
   final TuneModel tuneModel;
