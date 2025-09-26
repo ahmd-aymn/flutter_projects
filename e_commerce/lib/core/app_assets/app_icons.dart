@@ -1,0 +1,35 @@
+abstract class AppIcons {
+  static const String defaultPath = 'assets/icons/';
+  static const String yum = '${defaultPath}yum.svg';
+  static const String yum2 = '${defaultPath}yum2.svg';
+  static const String arrowForward = '${defaultPath}arrowForward.svg';
+  static const String arrowBackward = '${defaultPath}arrowBackward.svg';
+  static const String list = '${defaultPath}list.svg';
+  static const String visa = '${defaultPath}visa.svg';
+  static const String delivery = '${defaultPath}delivery.svg';
+  static const String closedEye = '${defaultPath}closedEye.svg';
+  static const String cart = '${defaultPath}cart.svg';
+  static const String cart2 = '${defaultPath}cart2.svg';
+  static const String ellipse12 = '${defaultPath}ellipse12.svg';
+  static const String ellipse13 = '${defaultPath}ellipse13.svg';
+  static const String star = '${defaultPath}star.svg';
+  static const String heart = '${defaultPath}heart.svg';
+  static const String home = '${defaultPath}home.svg';
+  static const String menu2 = '${defaultPath}menu2.svg';
+  static const String user_icon = '${defaultPath}user_icon.svg';
+  static const String snacks = '${defaultPath}snacks.svg';
+  static const String meals = '${defaultPath}meals.svg';
+  static const String vegan = '${defaultPath}vegan.svg';
+  static const String desserts = '${defaultPath}desserts.svg';
+  static const String drinks = '${defaultPath}drinks.svg';
+  static const String whiteHeart = '${defaultPath}whiteHeart.svg';
+  static const String add = '${defaultPath}add.svg';
+  static const String minus = '${defaultPath}minus.svg';
+  static const String myProfile = '${defaultPath}myProfile.svg';
+  static const String myOrders = '${defaultPath}cart.svg';
+  static const String myFavourites = '${defaultPath}myFavourites.svg';
+  static const String mySettings = '${defaultPath}mySettings.svg';
+  static const String logout = '${defaultPath}logout.svg';
+  static const String recycle = '${defaultPath}recycle.svg';
+  static const String cam = '${defaultPath}cam.svg';
+}

@@ -1,0 +1,13 @@
+# Flutter build outputs
+*/build/
+**/*.apk
+**/*.aab
+**/*.so
+**/*.bin
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+
+# VSCode
+.vscode/

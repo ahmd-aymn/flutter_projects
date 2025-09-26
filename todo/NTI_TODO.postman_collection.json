@@ -1,0 +1,378 @@
+{
+	"info": {
+		"_postman_id": "72cb245c-cfd2-49d4-8094-9a228b83963c",
+		"name": "TODO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26797709"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/GettyImages-1315607788 2.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}register",
+							"host": [
+								"{{base_pos_url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ahmed",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}login",
+							"host": [
+								"{{base_pos_url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NTcwMSwianRpIjoiNDZjOWVhNDUtNzZiYy00MzQ3LTk3YTMtYjRiMTIxYmJlNGRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY1NzAxLCJjc3JmIjoiZWEwNzAwYjctNmJlZC00ZjE3LTkzOWQtZmJhZjFlMTE3ZTBkIiwiZXhwIjoxNzQxNTY2NjAxfQ.5wwxBwwMcyUsTBVPEn89CYyKKOqDS4MF-Fezc1jXlJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "current_password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "new_password",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "new_password_confirm",
+									"value": "1234567",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}change_password",
+							"host": [
+								"{{base_pos_url}}change_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh_token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NjMyNSwianRpIjoiMjFhMTA4NzgtZWUzOS00MDI3LWExNDItZDM1YTkwNjc1ZDlkIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjIsIm5iZiI6MTc0MTU2NjMyNSwiY3NyZiI6IjAwNjhlZDdhLTRmY2EtNDMwNC05ZjI5LTE3MDQzZDJjZDg4MCIsImV4cCI6MTc0NDE1ODMyNX0.SvGe0eWPER1kXJdDitIT0-Kz_ivtbE5aklbVI2GmCxc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_pos_url}}refresh_token",
+							"host": [
+								"{{base_pos_url}}refresh_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NTcwMSwianRpIjoiNDZjOWVhNDUtNzZiYy00MzQ3LTk3YTMtYjRiMTIxYmJlNGRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY1NzAxLCJjc3JmIjoiZWEwNzAwYjctNmJlZC00ZjE3LTkzOWQtZmJhZjFlMTE3ZTBkIiwiZXhwIjoxNzQxNTY2NjAxfQ.5wwxBwwMcyUsTBVPEn89CYyKKOqDS4MF-Fezc1jXlJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ahmed saber abdo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/flutter_cubit_full.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}update_profile",
+							"host": [
+								"{{base_pos_url}}update_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NTcwMSwianRpIjoiNDZjOWVhNDUtNzZiYy00MzQ3LTk3YTMtYjRiMTIxYmJlNGRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY1NzAxLCJjc3JmIjoiZWEwNzAwYjctNmJlZC00ZjE3LTkzOWQtZmJhZjFlMTE3ZTBkIiwiZXhwIjoxNzQxNTY2NjAxfQ.5wwxBwwMcyUsTBVPEn89CYyKKOqDS4MF-Fezc1jXlJA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ahmed saber abdo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/flutter_cubit_full.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}get_user_data",
+							"host": [
+								"{{base_pos_url}}get_user_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NTcwMSwianRpIjoiNDZjOWVhNDUtNzZiYy00MzQ3LTk3YTMtYjRiMTIxYmJlNGRkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY1NzAxLCJjc3JmIjoiZWEwNzAwYjctNmJlZC00ZjE3LTkzOWQtZmJhZjFlMTE3ZTBkIiwiZXhwIjoxNzQxNTY2NjAxfQ.5wwxBwwMcyUsTBVPEn89CYyKKOqDS4MF-Fezc1jXlJA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_pos_url}}delete_user",
+							"host": [
+								"{{base_pos_url}}delete_user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "new_task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NzMzOSwianRpIjoiYzkwOWNlNTYtYjVhMy00Zjc4LWJiOWYtNzcxMzE5ZjM4MTMxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY3MzM5LCJjc3JmIjoiNmE0YjZhZmQtNjczZS00NmU2LWFlMmMtNDcxZDZjYzg0YmY3IiwiZXhwIjoxNzQxNTY4MjM5fQ.lzgjtQDEhxE2-eYGXqHUOZtHlXNvIbXxsGyLRvT-do0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "task from saner",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "....",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/GitHub-Emblem.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}new_task",
+							"host": [
+								"{{base_pos_url}}new_task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Tasks Test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_pos_url}}tasks",
+							"host": [
+								"{{base_pos_url}}tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2Njc5MiwianRpIjoiODNkYjkwYjgtM2UzZC00N2Y4LTkxMjgtOTM0YTExNWJmNzBjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQxNTY2NzkyLCJjc3JmIjoiNDY3NjI5ODUtZjU0Mi00YWY2LThjMzctM2YyYTFhNGExNDBlIiwiZXhwIjoxNzQxNTY3NjkyfQ.CuOxZ8FIdZ_Gs6P6Xqdv_c0tGoHRYiLvRDJOd2mCL-w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "task ",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": ".",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/dart (3).png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_pos_url}}tasks/1",
+							"host": [
+								"{{base_pos_url}}tasks"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2NzMzOSwianRpIjoiYzkwOWNlNTYtYjVhMy00Zjc4LWJiOWYtNzcxMzE5ZjM4MTMxIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MiwibmJmIjoxNzQxNTY3MzM5LCJjc3JmIjoiNmE0YjZhZmQtNjczZS00NmU2LWFlMmMtNDcxZDZjYzg0YmY3IiwiZXhwIjoxNzQxNTY4MjM5fQ.lzgjtQDEhxE2-eYGXqHUOZtHlXNvIbXxsGyLRvT-do0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_pos_url}}tasks/2",
+							"host": [
+								"{{base_pos_url}}tasks"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my_tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MTU2Njc5MiwianRpIjoiODNkYjkwYjgtM2UzZC00N2Y4LTkxMjgtOTM0YTExNWJmNzBjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQxNTY2NzkyLCJjc3JmIjoiNDY3NjI5ODUtZjU0Mi00YWY2LThjMzctM2YyYTFhNGExNDBlIiwiZXhwIjoxNzQxNTY3NjkyfQ.CuOxZ8FIdZ_Gs6P6Xqdv_c0tGoHRYiLvRDJOd2mCL-w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_pos_url}}my_tasks",
+							"host": [
+								"{{base_pos_url}}my_tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

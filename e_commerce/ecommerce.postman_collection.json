@@ -1,0 +1,840 @@
+{
+	"info": {
+		"_postman_id": "bc084341-2da2-4577-8702-c04d4c4bf98d",
+		"name": "ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26797709"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Ahmed Saber",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/GettyImages-1315607788 2.png",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "ahmedsaber52001@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01004383942",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}register",
+							"host": [
+								"{{base_eco_url}}register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ahmedsaber52001@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}login",
+							"host": [
+								"{{base_eco_url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "refresh_token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjQ3NTA1OCwianRpIjoiYTcyYmNmMmUtOTA3ZC00ODBkLTk2ZmEtOTQxYWJiOWRmZjQzIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOjEsIm5iZiI6MTc0MjQ3NTA1OCwiY3NyZiI6IjEyNjM4NWYyLTRlYWUtNGUxMy1hNDc0LTRiNmM1NmQ0NTBiZSIsImV4cCI6MTc0NTA2NzA1OH0.KspSVrloB89zZo4htzYFQXf9ZZY5YBHChPyNxGXxUEU",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}refresh_token",
+							"host": [
+								"{{base_eco_url}}refresh_token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjQ3NTA4NSwianRpIjoiZDE3YTY4MTgtMDIwNS00NjBkLWE3MDAtNzZkMmUxNTBmNWJkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNDc1MDg1LCJjc3JmIjoiYWQyMzdhNDktYTNlZi00MmM2LThmNmMtYTdhMGRmMjIwNWEwIiwiZXhwIjoxNzQyNDc1OTg1fQ.KbJQQJhPURm6l-oSTvFmxa9DAiMRI6E8NRnwg3HZdnY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "ahmed saber abdo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/flutter_cubit_full.png",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}update_profile",
+							"host": [
+								"{{base_eco_url}}update_profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU1NTQxMSwianRpIjoiMzZhZDNjOTItYjg0NS00ZTg0LWFiOTgtMWQ5ODdmOGMzNGZjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzQyNTU1NDExLCJjc3JmIjoiMGI2YWViYTYtNDgyMS00NmQ2LWE5ZTQtOTc2Njc1YjIxNDYzIiwiZXhwIjoxNzQyNTU2MzExfQ.bTbgx8PfeiXSqiUpdPwnzpaoHXIFIR14_7Aj4eM7w8s",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "ahmed saber abdo",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/flutter_cubit_full.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}get_user_data",
+							"host": [
+								"{{base_eco_url}}get_user_data"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjQ3NTA4NSwianRpIjoiZDE3YTY4MTgtMDIwNS00NjBkLWE3MDAtNzZkMmUxNTBmNWJkIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNDc1MDg1LCJjc3JmIjoiYWQyMzdhNDktYTNlZi00MmM2LThmNmMtYTdhMGRmMjIwNWEwIiwiZXhwIjoxNzQyNDc1OTg1fQ.KbJQQJhPURm6l-oSTvFmxa9DAiMRI6E8NRnwg3HZdnY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}delete_user",
+							"host": [
+								"{{base_eco_url}}delete_user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sliders",
+			"item": [
+				{
+					"name": "new slider",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU2NzM2OSwianRpIjoiMzMwMjg2NDUtZjkyNC00YmVhLWI5ODQtMmQ0NjU1ZmE5YTJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzQyNTY3MzY5LCJjc3JmIjoiZWNkNjUwYzQtMTZjNS00NWE1LTlkYWYtMzkwODBkMjUzZGQ3IiwiZXhwIjoxNzQyNTY4MjY5fQ.6zrqfQUWQaABUBqy4_jA963yF8Ivnkl3D5lcSSDvCOA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "slider 01 title",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "slider 01 description",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/dart (17).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}new_slider",
+							"host": [
+								"{{base_eco_url}}new_slider"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit slider",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU2NzM2OSwianRpIjoiMzMwMjg2NDUtZjkyNC00YmVhLWI5ODQtMmQ0NjU1ZmE5YTJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzQyNTY3MzY5LCJjc3JmIjoiZWNkNjUwYzQtMTZjNS00NWE1LTlkYWYtMzkwODBkMjUzZGQ3IiwiZXhwIjoxNzQyNTY4MjY5fQ.6zrqfQUWQaABUBqy4_jA963yF8Ivnkl3D5lcSSDvCOA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "task 1 +",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "task 1 + description",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/flutter_cubit_full.png",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}slider/1",
+							"host": [
+								"{{base_eco_url}}slider"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete slider",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU2NzM2OSwianRpIjoiMzMwMjg2NDUtZjkyNC00YmVhLWI5ODQtMmQ0NjU1ZmE5YTJjIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzQyNTY3MzY5LCJjc3JmIjoiZWNkNjUwYzQtMTZjNS00NWE1LTlkYWYtMzkwODBkMjUzZGQ3IiwiZXhwIjoxNzQyNTY4MjY5fQ.6zrqfQUWQaABUBqy4_jA963yF8Ivnkl3D5lcSSDvCOA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}slider/1",
+							"host": [
+								"{{base_eco_url}}slider"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get sliders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_eco_url}}sliders",
+							"host": [
+								"{{base_eco_url}}sliders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "new category",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "cat 1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "cat 1 description",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/cat.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}new_category",
+							"host": [
+								"{{base_eco_url}}new_category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit category",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU2ODMwNywianRpIjoiOGVjMzcxNGEtMjU4Mi00NzM2LThkN2MtOTM1OTlkNTU0ZDFlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzQyNTY4MzA3LCJjc3JmIjoiZTA3YjQyNzMtZThiZi00YWM2LWJjMTItODRkZTAwZGQwZTlmIiwiZXhwIjoxNzQyNTY5MjA3fQ.y3kAiZpndZmEiAlhUXOPO0h2LO27Uyo-o9c9r525BcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "category 1 +",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "category 1 + description",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": [],
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}category/2",
+							"host": [
+								"{{base_eco_url}}category"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU2ODMwNywianRpIjoiOGVjMzcxNGEtMjU4Mi00NzM2LThkN2MtOTM1OTlkNTU0ZDFlIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MywibmJmIjoxNzQyNTY4MzA3LCJjc3JmIjoiZTA3YjQyNzMtZThiZi00YWM2LWJjMTItODRkZTAwZGQwZTlmIiwiZXhwIjoxNzQyNTY5MjA3fQ.y3kAiZpndZmEiAlhUXOPO0h2LO27Uyo-o9c9r525BcI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}category/1",
+							"host": [
+								"{{base_eco_url}}category"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}categories",
+							"host": [
+								"{{base_eco_url}}categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "place_order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"items\": [\r\n        {\r\n            \"product_id\": 3,\r\n            \"quantity\": 2\r\n        },\r\n        {\r\n            \"product_id\": 2,\r\n            \"quantity\": 1\r\n        }\r\n\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_eco_url}}place_order",
+							"host": [
+								"{{base_eco_url}}place_order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancel order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}orders/cancel/1",
+							"host": [
+								"{{base_eco_url}}orders"
+							],
+							"path": [
+								"cancel",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "complete order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}orders/complete/3",
+							"host": [
+								"{{base_eco_url}}orders"
+							],
+							"path": [
+								"complete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get orders",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}orders",
+							"host": [
+								"{{base_eco_url}}orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "new product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "product 3",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "product 3 description",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "4.5",
+									"type": "text"
+								},
+								{
+									"key": "best_seller",
+									"value": "1",
+									"description": "'0' means false, '1' means true",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "80",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/unsplash_0vsk2_9dkqo.png"
+								},
+								{
+									"key": "category_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}new_product",
+							"host": [
+								"{{base_eco_url}}new_product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_to_favorite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}add_to_favorite",
+							"host": [
+								"{{base_eco_url}}add_to_favorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3NzI4NCwianRpIjoiZTQ0YTg5YzctNzljZC00M2ViLTg3MzktZTU0OWEzOGQwZmM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc3Mjg0LCJjc3JmIjoiMDA5YzNmZGMtZjE5Yy00NGI4LTkzZTYtY2UzOWI5NzM3OWIwIiwiZXhwIjoxNzQyNTc4MTg0fQ.7hzE13riIRE56MXbDivGOfhhct-q7304PvzyrqPHey4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "product 3 +",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "product 3 + description",
+									"type": "text"
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "best_seller",
+									"value": "1",
+									"description": "'0' means false, '1' means true",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/pc/Downloads/image 15.png"
+								},
+								{
+									"key": "category_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_eco_url}}product/3",
+							"host": [
+								"{{base_eco_url}}product"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3NjM0OCwianRpIjoiYWYzOGZiMjEtOTZjYS00ZmEyLWI3ZWEtZTk0ZGE5ZTQ5YzY2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc2MzQ4LCJjc3JmIjoiODMwODE5MDItMWQ0Ni00MmMyLTk3MzgtZDIzNThkMjQ3MTZiIiwiZXhwIjoxNzQyNTc3MjQ4fQ.u1nXUtiZeUJuXSaC1BSrAQ5mQ3WfMZJHiAHn8Y-W1HM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}product/3",
+							"host": [
+								"{{base_eco_url}}product"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3OTg5OSwianRpIjoiMmM2YmNlODUtZjgwNi00ZjY2LWIzZTAtNzczZTM2MWIyMjY3IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc5ODk5LCJjc3JmIjoiZDgzZDIyYzUtYWZiYS00MDZiLWE1ZjAtNGE1NTZlMzZiZDZmIiwiZXhwIjoxNzQyNTgwNzk5fQ.uI1B9rT-pskg0u7fiVmeGscRu28uUNAIC3C8jTnAIns",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}products",
+							"host": [
+								"{{base_eco_url}}products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3NjM0OCwianRpIjoiYWYzOGZiMjEtOTZjYS00ZmEyLWI3ZWEtZTk0ZGE5ZTQ5YzY2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc2MzQ4LCJjc3JmIjoiODMwODE5MDItMWQ0Ni00MmMyLTk3MzgtZDIzNThkMjQ3MTZiIiwiZXhwIjoxNzQyNTc3MjQ4fQ.u1nXUtiZeUJuXSaC1BSrAQ5mQ3WfMZJHiAHn8Y-W1HM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}products/search?q=p",
+							"host": [
+								"{{base_eco_url}}products"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "p"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "best_seller_products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3NjM0OCwianRpIjoiYWYzOGZiMjEtOTZjYS00ZmEyLWI3ZWEtZTk0ZGE5ZTQ5YzY2IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc2MzQ4LCJjc3JmIjoiODMwODE5MDItMWQ0Ni00MmMyLTk3MzgtZDIzNThkMjQ3MTZiIiwiZXhwIjoxNzQyNTc3MjQ4fQ.u1nXUtiZeUJuXSaC1BSrAQ5mQ3WfMZJHiAHn8Y-W1HM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}best_seller_products",
+							"host": [
+								"{{base_eco_url}}best_seller_products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "top_rated_products",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc0MjU3NzI4NCwianRpIjoiZTQ0YTg5YzctNzljZC00M2ViLTg3MzktZTU0OWEzOGQwZmM5IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6MSwibmJmIjoxNzQyNTc3Mjg0LCJjc3JmIjoiMDA5YzNmZGMtZjE5Yy00NGI4LTkzZTYtY2UzOWI5NzM3OWIwIiwiZXhwIjoxNzQyNTc4MTg0fQ.7hzE13riIRE56MXbDivGOfhhct-q7304PvzyrqPHey4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_eco_url}}top_rated_products",
+							"host": [
+								"{{base_eco_url}}top_rated_products"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
