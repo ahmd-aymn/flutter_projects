@@ -1,16 +1,19 @@
-# e_commerce
 
-A new Flutter project.
+# RESTAURANT APP
+🚀 A powerful and efficient resturant app built with Flutter.
 
-## Getting Started
+# Features:-
 
-This project is a starting point for a Flutter application.
+🔒 Register & Login according to database with API
 
-A few resources to get you started if this is your first Flutter project:
+🍕 Show the menu and different food categories
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🍴 Search and add your favourite food to favourites
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🛒 Making order and add it to the cart to checkout
+
+🆕 Update profile name and change password and photo
+
+# Screens
+
+<img width="923" height="622" alt="Screenshot 2025-10-05 010301" src="https://github.com/user-attachments/assets/cc28017c-4ec0-4517-aa47-a4b7aa5ad87b" />
