@@ -13,3 +13,6 @@
 🆕 API integration with backend to get news from internet.
 
 ![news_app](https://github.com/user-attachments/assets/c0e7fdee-0f57-48a4-adcf-b93ee2e13416)
+
+# Live Demo
+https://youtu.be/bTviRZ6utCE?si=MPTzY6TxbyyXkeu-
