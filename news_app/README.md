@@ -1,16 +1,15 @@
-# news_app
+# NEWS APP
 
-A new Flutter project.
+🚀 A simple and efficient news app built with Flutter.
 
-## Getting Started
+# Features:-
 
-This project is a starting point for a Flutter application.
+📰 View latest news in Egypt and other countries.
 
-A few resources to get you started if this is your first Flutter project:
+🔬 The news is divided into several categories such as Business, Health, Entertainment, and others.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+🌐 Web migration with UI to view news website in the app.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🆕 API integration with backend to get news from internet.
+
+![news_app](https://github.com/user-attachments/assets/c0e7fdee-0f57-48a4-adcf-b93ee2e13416)
